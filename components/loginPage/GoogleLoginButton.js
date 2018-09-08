@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   container: {
     marginVertical: 10,
     paddingVertical: 10,
-    width: (Dimensions.get('window').width)*0.8,
+    width: (Dimensions.get('window').width)*0.78,
     textAlign:'center',
     borderRadius: 4,
     backgroundColor: '#dd4b39',

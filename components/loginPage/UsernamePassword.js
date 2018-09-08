@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    width: (Dimensions.get('window').width)*0.8,
+    width: (Dimensions.get('window').width)*0.78,
     marginVertical: 4,
     borderRadius: 4,
     backgroundColor: 'white'

@@ -6,24 +6,23 @@ import CreateAccountButton from './loginPage/CreateAccountButton';
 import UsernamePassword from './loginPage/UsernamePassword';
 import FacebookLoginButton from './loginPage/FacebookLoginButton';
 import GoogleLoginButton from './loginPage/GoogleLoginButton';
+import LinearGradient from 'react-native-linear-gradient';
 
 
 export default class Login extends Component<Props> {
   render() {
     return (
-      <View style={styles.container}>
+      <LinearGradient colors={['#41eef4', '#41d0f4', '#42a7f4']} style={styles.container}>
 
         <Text style={styles.title}>FEUDER</Text>
         <UsernamePassword/>
         <LoginButton/>
         <ForgotPasswordButton/>
-
         <FacebookLoginButton/>
         <GoogleLoginButton/>
-
         <CreateAccountButton/>
 
-      </View>
+      </LinearGradient>
     );
   }
 }
@@ -32,13 +31,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     width: Dimensions.get('window').width,
-    backgroundColor: '#41c6c6',
     alignItems: 'center'
   },
   title: {
     paddingTop: 80,
     paddingBottom: 55,
-    fontSize: 65,
+    fontSize: 72,
     alignSelf: 'center',
     color: 'white',
     fontStyle: 'italic',
