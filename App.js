@@ -1,21 +1,16 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, StatusBar} from 'react-native';
 import Login from './components/Login';
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import Post from './components/Post';
 
 type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar barStyle="light-content" backgroundColor="#4F6D7A"/>
+        <StatusBar barStyle="dark-content"/>
         <Login/>
+        {/* <Post/> */}
       </View>
     );
   }
@@ -26,12 +21,5 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#4F6D7A',
   },
-  welcome: {
-    fontSize: 30,
-    textAlign: 'center',
-    margin: 10,
-    color: 'white'
-  }
 });

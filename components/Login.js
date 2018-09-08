@@ -1,16 +1,28 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, TextInput, TouchableOpacity} from 'react-native';
+import {Platform, Dimensions, StyleSheet, Text, View, TextInput, TouchableOpacity} from 'react-native';
+import LoginButton from './loginPage/LoginButton';
+import ForgotPasswordButton from './loginPage/ForgotPasswordButton';
+import CreateAccountButton from './loginPage/CreateAccountButton';
+import UsernamePassword from './loginPage/UsernamePassword';
+import FacebookLoginButton from './loginPage/FacebookLoginButton';
+import GoogleLoginButton from './loginPage/GoogleLoginButton';
+
 
 export default class Login extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>FEUDER</Text>
-        <TextInput style={[{height: 40}, styles.information]} placeholder="Email or Phone Number"/>
-        <TextInput style={[{height: 40}, styles.information]} placeholder="Password"/>
-        <TouchableOpacity style={{justifyContent: "center", flex: 1, paddingBottom: 50}}>
-          <Text style={styles.button}>Log In</Text>
-        </TouchableOpacity>
+
+        <Text style={styles.title}>FEUDER</Text>
+        <UsernamePassword/>
+        <LoginButton/>
+        <ForgotPasswordButton/>
+
+        <FacebookLoginButton/>
+        <GoogleLoginButton/>
+
+        <CreateAccountButton/>
+
       </View>
     );
   }
@@ -19,31 +31,17 @@ export default class Login extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    backgroundColor: '#4F6D7A',
+    width: Dimensions.get('window').width,
+    backgroundColor: '#41c6c6',
+    alignItems: 'center'
   },
-  welcome: {
-    fontSize: 40,
-    margin: 10,
-    paddingTop: 50,
+  title: {
+    paddingTop: 80,
+    paddingBottom: 55,
+    fontSize: 65,
+    alignSelf: 'center',
     color: 'white',
     fontStyle: 'italic',
-    fontFamily: 'Georgia-Italic'
+    fontFamily: 'Baskerville'
   },
-  information: {
-    fontSize: 20,
-    margin: 10,
-    color: 'white'
-  },
-  button: {
-    paddingHorizontal: 30,
-    paddingVertical: 10,
-    color:'#fff',
-    textAlign:'center',
-    backgroundColor:'#4F6D7A',
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: '#fff',
-  }
 });
