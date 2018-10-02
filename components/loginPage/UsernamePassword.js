@@ -35,11 +35,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 40,
     fontSize: 15,
-    color: 'white',
   },
   icon: {
     fontSize: 25,
-    color: '#41c6c6',
+    color: '#41dff4',
     opacity: 1,
     paddingHorizontal: 10
   }
